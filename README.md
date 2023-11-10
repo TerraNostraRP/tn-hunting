@@ -8,6 +8,8 @@ Original: https://tebex.boii.dev/
 1) Customizar `config.lua` ao teu gosto
 3) Colocar os itens `qb-core/shared/items.lua`
 4) Colocar as imagens `qb-inventory/html/images`
+5) Colocar a pasta do script no server e renomear para boii-hunting
+6) No server.cfg colocar 'ensure boii-hunting'
 
 ### Requesitos
 

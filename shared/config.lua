@@ -1,5 +1,5 @@
 ----------------------------------
---<!>-- TerraNostra | DEVELOPMENT --<!>--
+--<!>-- BOII | DEVELOPMENT --<!>--
 ----------------------------------
 
 Config = {}
@@ -33,9 +33,9 @@ Config.Zones = {
 
 -- Ped settings
 Config.Peds = {
-    {name = 'Dusty', coords = vector4(-773.44, 5598.08, 33.61, 225.29), hash = 0x45348DBB, model = 'mp_m_exarmy_01', scenario = 'WORLD_HUMAN_SMOKING', icon = 'fas fa-paw', label = 'Falar com o Dusty', event = 'tn-hunting:client:HuntingStoreMain', distance = 1.0}, -- Hunting store ped/hide buyer
-    {name = 'Sho', coords = vector4(-638.77, -1249.97, 11.81, 175.67), hash = 0x352A026F, model = 'g_m_m_korboss_01', scenario = 'WORLD_HUMAN_SMOKING', icon = 'fas fa-clipboard', label = 'Falar com o Sho', event = 'tn-hunting:client:MeatStoreMain', distance = 1.0}, -- Meat buyer sho noodles
-    {name = 'Gustavo', coords = vector4(5611.23, -5655.02, 11.54, 86.8), hash = 0xB585B217, model = 'ig_gustavo', scenario = 'WORLD_HUMAN_SMOKING', icon = 'fab fa-drupal', label = 'Falar com o Gustavo', event = 'tn-hunting:client:ExoticAnimalsMenu', distance = 1.0} -- Exotic animal dealer
+    {name = 'Dusty', coords = vector4(-773.44, 5598.08, 33.61, 225.29), hash = 0x45348DBB, model = 'mp_m_exarmy_01', scenario = 'WORLD_HUMAN_SMOKING', icon = 'fas fa-paw', label = 'Falar com o Dusty', event = 'boii-hunting:client:HuntingStoreMain', distance = 1.0}, -- Hunting store ped/hide buyer
+    {name = 'Sho', coords = vector4(-638.77, -1249.97, 11.81, 175.67), hash = 0x352A026F, model = 'g_m_m_korboss_01', scenario = 'WORLD_HUMAN_SMOKING', icon = 'fas fa-clipboard', label = 'Falar com o Sho', event = 'boii-hunting:client:MeatStoreMain', distance = 1.0}, -- Meat buyer sho noodles
+    {name = 'Gustavo', coords = vector4(5611.23, -5655.02, 11.54, 86.8), hash = 0xB585B217, model = 'ig_gustavo', scenario = 'WORLD_HUMAN_SMOKING', icon = 'fab fa-drupal', label = 'Falar com o Gustavo', event = 'boii-hunting:client:ExoticAnimalsMenu', distance = 1.0} -- Exotic animal dealer
 }
 
 -- Skinning settings

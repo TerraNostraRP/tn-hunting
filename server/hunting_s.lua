@@ -9,7 +9,7 @@ local Core = exports[CoreFolder]:GetCoreObject()
 --<!>-- DO NOT EDIT ANYTHING ABOVE THIS TEXT UNLESS YOU KNOW WHAT YOU ARE DOING SUPPORT WILL NOT BE PROVIDED IF YOU IGNORE THIS --<!>--
 
 --<!>-- SELL HIDES START --<!>--
-RegisterServerEvent('tn-hunting:server:SellHides', function(args) 
+RegisterServerEvent('boii-hunting:server:SellHides', function(args) 
 	local source = source
     local Player = Core.Functions.GetPlayer(source)
 	local args = tonumber(args)
@@ -46,13 +46,13 @@ RegisterServerEvent('tn-hunting:server:SellHides', function(args)
         Player.Functions.AddMoney(Config.Stores.Selling.MoneyType, pay)	
         TriggerClientEvent('inventory:client:ItemBox', source, Core.Shared.Items[saleitem], 'remove', item)
     else
-        TriggerClientEvent('tn-hunting:notifications', source, Language.Stores.Selling['noitems'], 'error')
+        TriggerClientEvent('boii-hunting:notifications', source, Language.Stores.Selling['noitems'], 'error')
     end
 end)
 --<!>-- SELL HIDES END --<!>--
 
 --<!>-- SELL MEAT START --<!>--
-RegisterServerEvent('tn-hunting:server:SellMeats', function(args) 
+RegisterServerEvent('boii-hunting:server:SellMeats', function(args) 
 	local source = source
     local Player = Core.Functions.GetPlayer(source)
 	local args = tonumber(args)
@@ -95,7 +95,7 @@ RegisterServerEvent('tn-hunting:server:SellMeats', function(args)
         Player.Functions.AddMoney(Config.Stores.Selling.MoneyType, pay)	
         TriggerClientEvent('inventory:client:ItemBox', source, Core.Shared.Items[saleitem], 'remove', item)
     else
-        TriggerClientEvent('tn-hunting:notifications', source, Language.Stores.Selling['noitems'], 'error')
+        TriggerClientEvent('boii-hunting:notifications', source, Language.Stores.Selling['noitems'], 'error')
     end
 end)
 --<!>-- SELL MEAT END --<!>--
@@ -129,7 +129,7 @@ Core.Functions.CreateUseableItem('huntinglicense', function(source, item)
 	end
 end)
 -- License check callback
-Core.Functions.CreateCallback('tn-hunting:server:CheckLicense', function(source, cb)
+Core.Functions.CreateCallback('boii-hunting:server:CheckLicense', function(source, cb)
     local src = source
     local Player = Core.Functions.GetPlayer(src)
     local licenseTable = Player.PlayerData.metadata['licences']

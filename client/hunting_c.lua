@@ -1,5 +1,5 @@
 ----------------------------------
---<!>-- TerraNostra | DEVELOPMENT --<!>--
+--<!>-- BOII | DEVELOPMENT --<!>--
 ----------------------------------
 
 --<!>-- DO NOT EDIT ANYTHING BELOW THIS TEXT UNLESS YOU KNOW WHAT YOU ARE DOING SUPPORT WILL NOT BE PROVIDED IF YOU IGNORE THIS --<!>--
@@ -11,8 +11,8 @@ local MenuName = Config.CoreSettings.MenuName
 --<!>-- DO NOT EDIT ANYTHING ABOVE THIS TEXT UNLESS YOU KNOW WHAT YOU ARE DOING SUPPORT WILL NOT BE PROVIDED IF YOU IGNORE THIS --<!>--
 
 --<!>-- NOTIFICATIONS CODE START --<!>--
-RegisterNetEvent('tn-hunting:notifications')
-AddEventHandler('tn-hunting:notifications', function(msg, type)
+RegisterNetEvent('boii-hunting:notifications')
+AddEventHandler('boii-hunting:notifications', function(msg, type)
     Core.Functions.Notify(msg,type)
 end)
 --<!>-- NOTIFICATIONS CODE END --<!>--
@@ -64,12 +64,12 @@ local Animals = {
 	'a_c_cow',
 	'a_c_hen',
 }
-exports[TargetName]:AddTargetModel(Animals, {options = {{event = 'tn-hunting:client:SkinAnimal',icon = Language.Targeting['animalsicon'],label = Language.Targeting['animalslabel'],item = Config.Skinning.Item}},distance = 2.0})
+exports[TargetName]:AddTargetModel(Animals, {options = {{event = 'boii-hunting:client:SkinAnimal',icon = Language.Targeting['animalsicon'],label = Language.Targeting['animalslabel'],item = Config.Skinning.Item}},distance = 2.0})
 --<!>-- ANIMALS TARGETING END --<!>--
 
 --<!>-- STORES START --<!>--
 -- No license store
-RegisterNetEvent('tn-hunting:client:StoreNoLicense', function()
+RegisterNetEvent('boii-hunting:client:StoreNoLicense', function()
     local ShopItems = {}
     ShopItems.label = Language.Stores.Hunting['huntingstorelabel'] 
         ShopItems.items = Config.Stores.Hunting.NoLicense
@@ -77,7 +77,7 @@ RegisterNetEvent('tn-hunting:client:StoreNoLicense', function()
     TriggerServerEvent('inventory:server:OpenInventory', 'shop', 'huntingstore', ShopItems)
 end)
 -- Has license store
-RegisterNetEvent('tn-hunting:client:StoreLicense', function()
+RegisterNetEvent('boii-hunting:client:StoreLicense', function()
     local ShopItems = {}
     ShopItems.label = Language.Stores.Hunting['huntingstorelabel'] 
         ShopItems.items = Config.Stores.Hunting.License

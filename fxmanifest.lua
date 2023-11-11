@@ -1,5 +1,5 @@
 ----------------------------------
---<!>-- TerraNostra | DEVELOPMENT --<!>--
+--<!>-- BOII | DEVELOPMENT --<!>--
 ----------------------------------
 
 fx_version 'adamant'
@@ -8,7 +8,7 @@ game 'gta5'
 
 author 'case#1993'
 
-description 'TerraNostra | Development - Hunting Script'
+description 'BOII | Development - Hunting Script'
 
 version '1.1.2'
 

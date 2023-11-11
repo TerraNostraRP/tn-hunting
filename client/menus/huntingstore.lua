@@ -1,5 +1,5 @@
 ----------------------------------
---<!>-- TerraNostra | DEVELOPMENT --<!>--
+--<!>-- BOII | DEVELOPMENT --<!>--
 ----------------------------------
 
 --<!>-- DO NOT EDIT ANYTHING BELOW THIS TEXT UNLESS YOU KNOW WHAT YOU ARE DOING SUPPORT WILL NOT BE PROVIDED IF YOU IGNORE THIS --<!>--
@@ -19,7 +19,7 @@ local MainMenu = {
         txt = Language.Stores.Hunting['sellhidesheadertext'],
         icon = Language.Stores.Hunting['sellhidesheadericon'],
         params = {
-            event = 'tn-hunting:client:SellHidesMenu',
+            event = 'boii-hunting:client:SellHidesMenu',
         }
     },
     {
@@ -27,14 +27,14 @@ local MainMenu = {
         txt = Language.Stores.Hunting['openstoreheadertext'],
         icon = Language.Stores.Hunting['openstoreheadericon'],
         params = {
-            event = 'tn-hunting:client:CheckLicense',
+            event = 'boii-hunting:client:CheckLicense',
         }
     },
     {
         header = Language.Shared['exitmenu'],
         icon = Language.Shared['exitmenuicon'],
         params = {
-            event = 'tn-hunting:client:StopMenu'
+            event = 'boii-hunting:client:StopMenu'
         }
     },
 }
@@ -51,7 +51,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['ratskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 1
         }
@@ -61,7 +61,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['rabbitskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 2
         }
@@ -71,7 +71,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['pigskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 3
         }
@@ -81,7 +81,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['cowskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 4
         }
@@ -91,7 +91,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['deerskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 5
         }
@@ -101,7 +101,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['boarskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 6
         }
@@ -111,7 +111,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['coyoteskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 7
         }
@@ -121,7 +121,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['mtlionskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 8
         }
@@ -131,7 +131,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['stingrayskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 9
         }
@@ -141,7 +141,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['dolphinskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 10
         }
@@ -151,7 +151,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['sharkskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 11
         }
@@ -161,7 +161,7 @@ local SellMenu = {
         txt = Language.Stores.Selling['whaleskinheadertext'],
         icon = Language.Stores.Selling['skinheadericon'],
         params = {
-            event = 'tn-hunting:server:SellHides',
+            event = 'boii-hunting:server:SellHides',
             isServer = true,
             args = 12
         }
@@ -170,25 +170,25 @@ local SellMenu = {
         header = Language.Shared['returnmenu'],
         icon = Language.Shared['returnmenuicon'],
         params = {
-            event = 'tn-hunting:client:HuntingStoreMain'
+            event = 'boii-hunting:client:HuntingStoreMain'
         }
     }
 }
 
 -- Events
 -- Main menu
-RegisterNetEvent('tn-hunting:client:HuntingStoreMain', function()
+RegisterNetEvent('boii-hunting:client:HuntingStoreMain', function()
     if Config.Stores.Hunting.UseTimes == true then
         if GetClockHours() >= Config.Stores.Hunting.StartTime and GetClockHours() <= Config.Stores.Hunting.EndTime then 
             exports[MenuName]:openMenu(MainMenu)
         else 
-            TriggerEvent('tn-hunting:notifications', Language.Stores.Hunting['timer'], 'error')
+            TriggerEvent('boii-hunting:notifications', Language.Stores.Hunting['timer'], 'error')
         end
     else
         exports[MenuName]:openMenu(MainMenu)
     end
 end)
 -- Selling menu
-RegisterNetEvent('tn-hunting:client:SellHidesMenu', function()
+RegisterNetEvent('boii-hunting:client:SellHidesMenu', function()
     exports[MenuName]:openMenu(SellMenu)
 end)
